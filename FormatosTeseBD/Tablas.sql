@@ -55,7 +55,7 @@ GO
 CREATE TABLE Prioridad
 (
 	Id INT IDENTITY PRIMARY KEY NOT NULL,
-	Letra VARCHAR(10) NOT NULL,
+	Letra VARCHAR(20) NOT NULL,
 	Descripcion VARCHAR(500) NOT NULL
 );
 GO
@@ -67,19 +67,19 @@ CREATE TABLE PeriodoEscolar
 	FechaFin DATETIME NULL
 );
 GO
+CREATE TABLE EstadoProceso
+(
+	Id INT IDENTITY PRIMARY KEY NOT NULL,
+	Descripcion VARCHAR(100) NOT NULL,
+	UNIQUE (Descripcion)
+);
+GO
 CREATE TABLE Usuario
 (
 	Id INT IDENTITY PRIMARY KEY NOT NULL,
 	NombreUsuario VARCHAR(100) NOT NULL,
 	Contrasena VARCHAR(100) NOT NULL,
 	UNIQUE (NombreUsuario)
-);
-GO
-CREATE TABLE EstadoProceso
-(
-	Id INT IDENTITY PRIMARY KEY NOT NULL,
-	Descripcion VARCHAR(100) NOT NULL,
-	UNIQUE (Descripcion)
 );
 GO
 -- Medias (Dependen de los Catalogos)
@@ -110,6 +110,40 @@ CREATE TABLE CargoPersona
 );
 GO
 -- Debiles (Dependen de otras Tablas para Existir)
+CREATE TABLE Programa
+(
+	Id INT IDENTITY PRIMARY KEY NOT NULL,
+	Clave VARCHAR(100) NULL,
+	Nombre VARCHAR(200) NULL,
+	NumCoordinador INT NOT NULL,
+	NumAreaInvestigacion INT NOT NULL,
+	NumLineaInvestigacion INT NOT NULL,
+	PosibleResultado VARCHAR(8000) NULL,
+	Justificacion VARCHAR(8000) NULL,
+	Resumen VARCHAR(8000) NULL,
+	Objetivos VARCHAR(8000) NULL,
+	Metodologia VARCHAR(8000) NULL,
+	Metas VARCHAR(8000) NULL,
+	CV VARBINARY(MAX) NULL,
+	FOREIGN KEY (NumAreaInvestigacion) REFERENCES AreaInvestigacion(Id),
+	FOREIGN KEY (NumLineaInvestigacion) REFERENCES LineaInvestigacion(Id),
+	FOREIGN KEY (NumCoordinador) REFERENCES CargoPersona(Id)
+);
+GO
+CREATE TABLE CronogramaPrograma
+(
+	Id INT IDENTITY PRIMARY KEY NOT NULL,
+	NumPrograma INT NOT NULL,
+	Numero INT NOT NULL,
+	Actividad VARCHAR(200) NOT NULL,
+	Unidad VARCHAR(50) NOT NULL,
+	Cantidad INT NOT NULL,
+	FechaInicio DATETIME NULL,
+	FechaFin DATETIME NULL,
+	Meses INT NULL,
+	FOREIGN KEY (NumPrograma) REFERENCES Programa(Id)
+);
+GO
 CREATE TABLE Proyecto
 (
 	Id INT IDENTITY PRIMARY KEY NOT NULL,
@@ -183,40 +217,6 @@ CREATE TABLE CronogramaProyecto
 	Meses INT NULL,
 	PorcentajeAvance INT DEFAULT 0 NULL,
 	FOREIGN KEY (NumProyecto) REFERENCES Proyecto(Id)
-);
-GO
-CREATE TABLE Programa
-(
-	Id INT IDENTITY PRIMARY KEY NOT NULL,
-	Clave VARCHAR(100) NULL,
-	Nombre VARCHAR(200) NULL,
-	NumCoordinador INT NOT NULL,
-	NumAreaInvestigacion INT NOT NULL,
-	NumLineaInvestigacion INT NOT NULL,
-	PosibleResultado VARCHAR(8000) NULL,
-	Justificacion VARCHAR(8000) NULL,
-	Resumen VARCHAR(8000) NULL,
-	Objetivos VARCHAR(8000) NULL,
-	Metodologia VARCHAR(8000) NULL,
-	Metas VARCHAR(8000) NULL,
-	CV VARBINARY(MAX) NULL,
-	FOREIGN KEY (NumAreaInvestigacion) REFERENCES AreaInvestigacion(Id),
-	FOREIGN KEY (NumLineaInvestigacion) REFERENCES LineaInvestigacion(Id),
-	FOREIGN KEY (NumCoordinador) REFERENCES CargoPersona(Id)
-);
-GO
-CREATE TABLE CronogramaPrograma
-(
-	Id INT IDENTITY PRIMARY KEY NOT NULL,
-	NumPrograma INT NOT NULL,
-	Numero INT NOT NULL,
-	Actividad VARCHAR(200) NOT NULL,
-	Unidad VARCHAR(50) NOT NULL,
-	Cantidad INT NOT NULL,
-	FechaInicio DATETIME NULL,
-	FechaFin DATETIME NULL,
-	Meses INT NULL,
-	FOREIGN KEY (NumPrograma) REFERENCES Programa(Id)
 );
 GO
 CREATE TABLE HojaAnalisis
