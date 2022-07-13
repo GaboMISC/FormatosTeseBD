@@ -19,11 +19,11 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="Consultas.sql">
+        <FileNode Name="Consultas Generales.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Consultas.sql</FullPath>
+          <FullPath>Consultas Generales.sql</FullPath>
         </FileNode>
         <FileNode Name="Datos.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>

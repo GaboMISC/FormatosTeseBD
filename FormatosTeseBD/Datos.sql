@@ -105,25 +105,85 @@ INSERT INTO [FormatosTESE].[dbo].[CargoPersona] (NumCargo, NumPersona, NumDivisi
 VALUES (4, 5, 1, 1, 1);
 GO
 -- Programa
-INSERT INTO Programa (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
+INSERT INTO [FormatosTESE].[dbo].[Programa] (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
 VALUES ('ISC-01', 'Ingeniería Sistemas Computacionales', 4, 2, 2, 'Descripción de los Resultados del Programa', 'Descripción de la Justificación del Programa', 'Descripción del Resumen del Programa', 'Descripción de los Objetivos del Programa', 'Descripción de la Metodlogía del Programa', 'Descripción de las Metas del Programa', NULL);
-INSERT INTO Programa (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
+INSERT INTO [FormatosTESE].[dbo].[Programa] (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
 VALUES ('MISC-02', 'Maestría en Ingeniería en Sistemas Computacionales  ', 4, 3, 1, 'Descripción de los Resultados del Programa', 'Descripción de la Justificación del Programa', 'Descripción del Resumen del Programa', 'Descripción de los Objetivos del Programa', 'Descripción de la Metodlogía del Programa', 'Descripción de las Metas del Programa', NULL);
 GO
 -- Cronograma del Programa
-INSERT INTO CronogramaPrograma (NumPrograma, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses) 
+INSERT INTO [FormatosTESE].[dbo].[CronogramaPrograma] (NumPrograma, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses) 
 VALUES (1, 1, 'Analisis', 'Dias', 5, '2022-04-01 00:00:00.000', '2022-04-06 00:00:00.000', 1);
-INSERT INTO CronogramaPrograma (NumPrograma, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses) 
+INSERT INTO [FormatosTESE].[dbo].[CronogramaPrograma] (NumPrograma, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses) 
 VALUES (1, 2, 'Construccion', 'Horas', 5, '2022-04-07 00:12:00.000', '2022-04-07 00:17:00.000', 1);
-INSERT INTO CronogramaPrograma (NumPrograma, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses) 
+INSERT INTO [FormatosTESE].[dbo].[CronogramaPrograma] (NumPrograma, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses) 
 VALUES (2, 1, 'Revision', 'Meses', 6, '2022-05-01 00:00:00.000', '2022-10-01 00:00:00.000', 6);
+GO
+-- Proyecto
+INSERT INTO [FormatosTESE].[dbo].[Proyecto] (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, NumNivelAcademico, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
+VALUES ('Proy-01', 'Redes Neuronales Convolucionales', 4, 2, 1, 2, 'Descripción de los Resultados del Proyecto', 'Descripción de la Justificación del Proyecto', 'Descripción del Resumen del Proyecto', 'Descripción de los Objetivos del Proyecto', 'Descripción de la Metodlogía del Proyecto', 'Descripción de las Metas del Proyecto', NULL);
+GO
+-- Recusos Materiales
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 1, 'Equipo de Computo');
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 2, 'Licencias dde Software');
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 4, 'Plumones para Pizarrón');
+GO
+-- Servicios
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 1, 'Internet');
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 1, 'Agua Potable');
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 1, 'Comedor');
+GO
+-- BienesMuebles
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 2, 'Escritorio');
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 2, 'Silla para Escritorio');
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (1, 2, 'Departamento u Oficina de Investigacion y Desarrollo');
+GO
+-- Honorarios
+INSERT INTO [FormatosTESE].[dbo].[Honorarios] (NumProyecto, EspecialidadPersonal, NumPersonalExterno, NumPersonalInterno, Dedicacionhoras) 
+VALUES (1, 'Asesor Tecnico', 1, NULL, 120);
+INSERT INTO [FormatosTESE].[dbo].[Honorarios] (NumProyecto, EspecialidadPersonal, NumPersonalExterno, NumPersonalInterno, Dedicacionhoras) 
+VALUES (1, 'Asesor Metodologico', NULL, 1, 60);
+GO
+-- Cronograma del Proyecto
+INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance) 
+VALUES (1, 1, 'Etapa 1', 'Dias', 5, '2022-04-01 00:00:00.000', '2022-04-06 00:00:00.000', 1, NULL);
+INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance)
+VALUES (1, 2, 'Etapa 2', 'Horas', 5, '2022-04-07 00:12:00.000', '2022-04-07 00:17:00.000', 1, NULL);
+INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance)
+VALUES (1, 3, 'Etapa 3', 'Meses', 6, '2022-05-01 00:00:00.000', '2022-10-01 00:00:00.000', 1, NULL);
+GO
+-- Hoja de Analisis
+INSERT INTO [FormatosTESE].[dbo].[HojaAnalisis] (NumProyecto, AntecedentesJustificacion, Metodologia, Objetivos, Impacto, SectorPublico, FormacionRH, SubtotalCriterios, cInfraestructura, cActividades, cRH, cProgramacion, cPresupuesto, SubtotalViabilidad, Total) 
+VALUES (1, 9, 7, 8, 9, 7, 7, 47, 4, 2, 1, 3, 5, 15, 62);
+GO
+-- Evaluacion
+INSERT INTO [FormatosTESE].[dbo].[Evaluacion] (Calificacion, NumPrioridad, NumResponsable, NumJefe, NumDirector, NumHojaAnalisis) 
+VALUES (8, 3, 3, 5, 6, 1);
+GO
+-- Evaluadores
+INSERT INTO [FormatosTESE].[dbo].[Evaluadores] (NumEvaluacion, NumCargoPersona) 
+VALUES (1, 1);
+INSERT INTO [FormatosTESE].[dbo].[Evaluadores] (NumEvaluacion, NumCargoPersona) 
+VALUES (1, 2);
+GO
+-- Hoja de Calificaciones
+INSERT INTO [FormatosTESE].[dbo].[HojaCalificaciones] (TotalProyectos, PromedioProyectos, AceptacionPrograma, NumResponsable, NumJefe, NumDirector, NumPrograma)
+VALUES (1, 8, 'El proyecto es viable y cuenta con los criterios de aceptacion necesarios.', 3, 5, 6, 1);
 GO
 /*
 -- aaaaaaaaaaa
-INSERT INTO aaaaaaaaaaa (aaaaaaaaaaa) VALUES ('aaaaaaaaaaa');
+INSERT INTO [FormatosTESE].[dbo].[aaaaaaaaaaa] (aaaaaaaaaaa) VALUES ('aaaaaaaaaaa');
 GO
 -- aaaaaaaaaaa
-INSERT INTO aaaaaaaaaaa (aaaaaaaaaaa, aaaaaaaaaaa, aaaaaaaaaaa, aaaaaaaaaaa, aaaaaaaaaaa) 
+INSERT INTO [FormatosTESE].[dbo].[aaaaaaaaaaa] (aaaaaaaaaaa, aaaaaaaaaaa, aaaaaaaaaaa, aaaaaaaaaaa, aaaaaaaaaaa) 
 VALUES ('aaaaaaaaaaa', 'aaaaaaaaaaa', 'aaaaaaaaaaa', 'aaaaaaaaaaa', 'aaaaaaaaaaa');
 GO
 */
