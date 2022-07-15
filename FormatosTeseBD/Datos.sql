@@ -178,6 +178,36 @@ GO
 INSERT INTO [FormatosTESE].[dbo].[HojaCalificaciones] (TotalProyectos, PromedioProyectos, AceptacionPrograma, NumResponsable, NumJefe, NumDirector, NumPrograma)
 VALUES (1, 8, 'El proyecto es viable y cuenta con los criterios de aceptacion necesarios.', 3, 5, 6, 1);
 GO
+-- Oficio Dictamen
+INSERT INTO [FormatosTESE].[dbo].[OficioDictamen] (NoOficio, FechaOficio, NumProyecto) 
+VALUES (1, GETDATE(), 1);
+GO
+-- Comite Evaluador
+INSERT INTO [FormatosTESE].[dbo].[ComiteEvaluador] (NumOficioDictamen, NumIntegranteComite) 
+VALUES (1, 1);
+INSERT INTO [FormatosTESE].[dbo].[ComiteEvaluador] (NumOficioDictamen, NumIntegranteComite) 
+VALUES (1, 2);
+GO
+-- Carta de Liberacion
+INSERT INTO [FormatosTESE].[dbo].[CartaLiberacion] (NumDivision, NoOficio, FechaOficio, NombrePersona, NumProyecto) 
+VALUES (1, 1, GETDATE(), 2, 1);
+GO
+-- Comite de Liberacion
+INSERT INTO [FormatosTESE].[dbo].[ComiteLiberacion] (NumCartaLiberacion, NumIntegranteComite) 
+VALUES (1, 1);
+INSERT INTO [FormatosTESE].[dbo].[ComiteLiberacion] (NumCartaLiberacion, NumIntegranteComite) 
+VALUES (1, 2);
+GO
+-- Informe
+INSERT INTO [FormatosTESE].[dbo].[Informe] (FechaInforme, PeriodoEscolar, NumDivision, NumResponsableDivision, PeriodoReportado, NoInforme, FormatosRequisitados, FormatosAprobadosComite, ProyectosEnProceso, ProyectosFinanciamientoExterno, ProyectosConcluidos, FormatosMes, Articulos, Libros, Patentes, Congresos, Estancias, ProfesorSNI, Convenios, ActividadesInherentes, NumResponsable, NumJefe, NumDirector) 
+VALUES (GETDATE(), 1, 1, 3, 'Julio - Agosto', 1, 2, 1, 1, 0, 0, 3, 2, 1, 1, 2, 1, 1, 0, 'Descripción de Actividades Inherentes', 3, 5, 6);
+GO
+-- Articulos Publicados
+INSERT INTO [FormatosTESE].[dbo].[ArticulosPublicados] (NumInforme, Articulo, Revista, Arbitraje, Nacional) 
+VALUES (1, 'Redes Neuronales', 'TESE', 0, 1);
+INSERT INTO [FormatosTESE].[dbo].[ArticulosPublicados] (NumInforme, Articulo, Revista, Arbitraje, Nacional) 
+VALUES (1, 'Mineria de Datos', 'Politecnico', 1, 0);
+GO
 /*
 -- aaaaaaaaaaa
 INSERT INTO [FormatosTESE].[dbo].[aaaaaaaaaaa] (aaaaaaaaaaa) VALUES ('aaaaaaaaaaa');

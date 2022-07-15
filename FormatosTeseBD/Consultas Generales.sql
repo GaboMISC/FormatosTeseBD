@@ -153,4 +153,66 @@ FROM [FormatosTESE].[dbo].[HojaCalificaciones] AS HC
 	INNER JOIN [FormatosTESE].[dbo].[Persona] AS PE1 ON PE1.Id = CP1.NumPersona
 	INNER JOIN [FormatosTESE].[dbo].[Persona] AS PE2 ON PE2.Id = CP2.NumPersona;
 
+-- Oficio Dictamen
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[OficioDictamen] WITH (NOLOCK);
+
+-- Oficio Dictamen Detalle
+SELECT TOP(5) OD.NoOficio, OD.FechaOficio, CONCAT(PY.Clave, ', ',  PY.Nombre) AS Proyecto
+FROM [FormatosTESE].[dbo].[OficioDictamen] AS OD
+INNER JOIN [FormatosTESE].[dbo].[Proyecto] AS PY ON PY.Id = OD.NumProyecto;
+
+-- Comite Evaluador
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[ComiteEvaluador] WITH (NOLOCK);
+
+-- Comite Evaluador Detalle
+SELECT TOP(5) CE.NumOficioDictamen AS [Numero de Oficio], CONCAT(PE.Nombre, ' ',  PE.Paterno, ' ', PE.Materno) AS [Integrante del Comite]
+FROM [FormatosTESE].[dbo].[ComiteEvaluador] AS CE
+INNER JOIN [FormatosTESE].[dbo].[CargoPersona] AS CP ON CP.Id = CE.NumIntegranteComite
+INNER JOIN [FormatosTESE].[dbo].[Persona] AS PE ON PE.Id = CP.NumPersona;
+
+-- Carta de Liberacion
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[CartaLiberacion] WITH (NOLOCK);
+
+-- Carta de Liberacion
+SELECT TOP(5) D.Descripcion AS [Division], CL.NoOficio, CL.FechaOficio, CONCAT(PE.Nombre, ' ',  PE.Paterno, ' ', PE.Materno) AS [Nombre de Persona], CONCAT(PY.Clave, ', ',  PY.Nombre) AS Proyecto
+FROM [FormatosTESE].[dbo].[CartaLiberacion] AS CL
+INNER JOIN [FormatosTESE].[dbo].[DivisionAcademica] AS D ON D.Id = CL.NumDivision
+INNER JOIN [FormatosTESE].[dbo].[Proyecto] AS PY ON PY.Id = CL.NumProyecto
+INNER JOIN [FormatosTESE].[dbo].[CargoPersona] AS CP ON CP.Id = CL.NombrePersona
+INNER JOIN [FormatosTESE].[dbo].[Persona] AS PE ON PE.Id = CP.NumPersona;
+
+-- Comite de Liberacion
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[ComiteLiberacion] WITH (NOLOCK);
+
+-- Comite de Liberacion Detalle
+SELECT TOP(5) CL.NumCartaLiberacion, CONCAT(PE.Nombre, ' ',  PE.Paterno, ' ', PE.Materno) AS [Integrante Comite]
+FROM [FormatosTESE].[dbo].[ComiteLiberacion] AS CL
+INNER JOIN [FormatosTESE].[dbo].[CargoPersona] AS CP ON CP.Id = CL.NumIntegranteComite
+INNER JOIN [FormatosTESE].[dbo].[Persona] AS PE ON PE.Id = CP.NumPersona;
+
+-- Informe
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[Informe] WITH (NOLOCK);
+
+-- Informe Detalle
+SELECT TOP(5) I.Id, I.FechaInforme, PE.Descripcion AS Periodo, DA.Descripcion AS Division,
+	CONCAT(P.Nombre, ' ',  P.Paterno, ' ', P.Materno) AS [Responsable Division],
+	I.PeriodoReportado, I.NoInforme, I.FormatosRequisitados, I.FormatosAprobadosComite, I.ProyectosEnProceso, I.ProyectosFinanciamientoExterno, I.ProyectosConcluidos, I.FormatosMes, I.Articulos, I.Libros, I.Patentes, I.Congresos, I.Estancias, I.ProfesorSNI, I.Convenios, I.ActividadesInherentes,
+	CONCAT(P.Nombre, ' ',  P.Paterno, ' ', P.Materno) AS [Responsable],
+	CONCAT(PJEF.Nombre, ' ',  PJEF.Paterno, ' ', PJEF.Materno) AS [Jefe],
+	CONCAT(PDIR.Nombre, ' ',  PDIR.Paterno, ' ', PDIR.Materno) AS [Director]
+FROM [FormatosTESE].[dbo].[Informe] AS I
+	INNER JOIN [FormatosTESE].[dbo].[PeriodoEscolar] AS PE ON PE.Id = I.PeriodoEscolar
+	INNER JOIN [FormatosTESE].[dbo].[DivisionAcademica] AS DA ON DA.Id = I.NumDivision
+	INNER JOIN [FormatosTESE].[dbo].[CargoPersona] AS RESP ON RESP.Id = I.NumResponsableDivision
+	INNER JOIN [FormatosTESE].[dbo].[Persona] AS P ON P.Id = RESP.NumPersona
+	INNER JOIN [FormatosTESE].[dbo].[CargoPersona] AS JEF ON JEF.Id = I.NumJefe
+	INNER JOIN [FormatosTESE].[dbo].[Persona] AS PJEF ON PJEF.Id = JEF.NumPersona
+	INNER JOIN [FormatosTESE].[dbo].[CargoPersona] AS DIR ON DIR.Id = I.NumDirector
+	INNER JOIN [FormatosTESE].[dbo].[Persona] AS PDIR ON PDIR.Id = DIR.NumPersona;
+
+-- Articulos Publicados
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[ArticulosPublicados] WITH (NOLOCK);
+
+-- Articulos Publicados Detalle
+
 -- SELECT TOP(5) * FROM [FormatosTESE].[dbo].[aaaaaaa] WITH (NOLOCK);
