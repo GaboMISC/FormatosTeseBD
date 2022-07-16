@@ -214,5 +214,25 @@ FROM [FormatosTESE].[dbo].[Informe] AS I
 SELECT TOP(5) * FROM [FormatosTESE].[dbo].[ArticulosPublicados] WITH (NOLOCK);
 
 -- Articulos Publicados Detalle
+SELECT AP.NumInforme AS [Informe Id], AP.Articulo, AP.Revista,
+	CASE
+		WHEN AP.Arbitraje = 0 THEN 'Sin Arbitraje'
+		WHEN AP.Arbitraje = 1 THEN 'Con Arbitraje'
+	END AS Arbitraje,
+	CASE
+		WHEN AP.Nacional = 0 THEN 'Extranjero'
+		WHEN AP.Nacional = 1 THEN 'Nacional'
+	END AS Arbitraje
+FROM [FormatosTESE].[dbo].[ArticulosPublicados] AS AP;
 
 -- SELECT TOP(5) * FROM [FormatosTESE].[dbo].[aaaaaaa] WITH (NOLOCK);
+
+-- Obtiene los datos del Personal
+SELECT C.Descripcion AS Cargo, P.Nombre, P.Paterno, P.Materno, DA.Descripcion AS [Division Academica], PE.Descripcion, CP.PuestoVigente
+FROM [FormatosTESE].[dbo].[CargoPersona] AS CP
+	INNER JOIN [FormatosTESE].[dbo].[Cargo] AS C ON C.Id = CP.NumCargo
+	INNER JOIN [FormatosTESE].[dbo].[Persona] AS P ON P.Id = CP.NumPersona
+	INNER JOIN [FormatosTESE].[dbo].[DivisionAcademica] AS DA ON DA.Id = CP.NumDivisionAcademica
+	INNER JOIN [FormatosTESE].[dbo].[PeriodoEscolar] AS PE ON PE.Id = CP.NumPeriodoEscolar
+WHERE 
+PE.Descripcion = '2022-2';

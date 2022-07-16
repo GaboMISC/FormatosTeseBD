@@ -77,6 +77,10 @@ INSERT INTO [FormatosTESE].[dbo].[Usuario] (NombreUsuario, Contrasena) VALUES ('
 INSERT INTO [FormatosTESE].[dbo].[Usuario] (NombreUsuario, Contrasena) VALUES ('ecorona', 'ecorona');
 INSERT INTO [FormatosTESE].[dbo].[Usuario] (NombreUsuario, Contrasena) VALUES ('jchavez', 'jchavez');
 INSERT INTO [FormatosTESE].[dbo].[Usuario] (NombreUsuario, Contrasena) VALUES ('areyes', 'areyes');
+INSERT INTO [FormatosTESE].[dbo].[Usuario] (NombreUsuario, Contrasena) VALUES ('jcuevas', 'jcuevas');
+INSERT INTO [FormatosTESE].[dbo].[Usuario] (NombreUsuario, Contrasena) VALUES ('epacheco', 'epacheco');
+INSERT INTO [FormatosTESE].[dbo].[Usuario] (NombreUsuario, Contrasena) VALUES ('dperez', 'dperez');
+INSERT INTO [FormatosTESE].[dbo].[Usuario] (NombreUsuario, Contrasena) VALUES ('acuevas', 'acuevas');
 GO
 -- Persona
 INSERT INTO [FormatosTESE].[dbo].[Persona] (Nombre, Paterno, Materno, Telefono, Correo, NumUsuario) 
@@ -89,6 +93,14 @@ INSERT INTO [FormatosTESE].[dbo].[Persona] (Nombre, Paterno, Materno, Telefono, 
 VALUES ('José Luis', 'Chavez', 'Rojas', '5555555555', 'jchavez@tese.edu.mx', 4);
 INSERT INTO [FormatosTESE].[dbo].[Persona] (Nombre, Paterno, Materno, Telefono, Correo, NumUsuario) 
 VALUES ('Alfonso', 'Martinez', 'Reyes', '5555555555', 'areyes@tese.edu.mx', 5);
+INSERT INTO [FormatosTESE].[dbo].[Persona] (Nombre, Paterno, Materno, Telefono, Correo, NumUsuario) 
+VALUES ('Jesus', 'Cuevas', 'Perafan', '5555555555', 'jcuevas@tese.edu.mx', 6);
+INSERT INTO [FormatosTESE].[dbo].[Persona] (Nombre, Paterno, Materno, Telefono, Correo, NumUsuario) 
+VALUES ('Edgar', 'Pacheco', 'Antonio', '5555555555', 'epacheco@tese.edu.mx', 7);
+INSERT INTO [FormatosTESE].[dbo].[Persona] (Nombre, Paterno, Materno, Telefono, Correo, NumUsuario) 
+VALUES ('Daniel', 'Perez', 'Cantillo', '5555555555', 'dperez@tese.edu.mx', 8);
+INSERT INTO [FormatosTESE].[dbo].[Persona] (Nombre, Paterno, Materno, Telefono, Correo, NumUsuario) 
+VALUES ('Alejandro', 'Cuevas', 'Perafan', '5555555555', 'acuevas@tese.edu.mx', 9);
 GO
 -- CargoPersona
 INSERT INTO [FormatosTESE].[dbo].[CargoPersona] (NumCargo, NumPersona, NumDivisionAcademica, NumPeriodoEscolar, PuestoVigente) 
@@ -103,6 +115,14 @@ INSERT INTO [FormatosTESE].[dbo].[CargoPersona] (NumCargo, NumPersona, NumDivisi
 VALUES (3, 4, 1, 1, 1);
 INSERT INTO [FormatosTESE].[dbo].[CargoPersona] (NumCargo, NumPersona, NumDivisionAcademica, NumPeriodoEscolar, PuestoVigente) 
 VALUES (4, 5, 1, 1, 1);
+INSERT INTO [FormatosTESE].[dbo].[CargoPersona] (NumCargo, NumPersona, NumDivisionAcademica, NumPeriodoEscolar, PuestoVigente) 
+VALUES (1, 6, 10, 2, 1);
+INSERT INTO [FormatosTESE].[dbo].[CargoPersona] (NumCargo, NumPersona, NumDivisionAcademica, NumPeriodoEscolar, PuestoVigente) 
+VALUES (1, 7, 4, 2, 1);
+INSERT INTO [FormatosTESE].[dbo].[CargoPersona] (NumCargo, NumPersona, NumDivisionAcademica, NumPeriodoEscolar, PuestoVigente) 
+VALUES (1, 8, 6, 2, 1);
+INSERT INTO [FormatosTESE].[dbo].[CargoPersona] (NumCargo, NumPersona, NumDivisionAcademica, NumPeriodoEscolar, PuestoVigente) 
+VALUES (1, 9, 10, 2, 1);
 GO
 -- Programa
 INSERT INTO [FormatosTESE].[dbo].[Programa] (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
