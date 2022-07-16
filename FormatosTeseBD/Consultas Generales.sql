@@ -225,6 +225,57 @@ SELECT AP.NumInforme AS [Informe Id], AP.Articulo, AP.Revista,
 	END AS Arbitraje
 FROM [FormatosTESE].[dbo].[ArticulosPublicados] AS AP;
 
+-- Libros Publicados
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[LibrosPublicados] WITH (NOLOCK);
+
+-- Patentes Informe
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[Patentes] WITH (NOLOCK);
+
+-- Congresos Informe
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[Congresos] WITH (NOLOCK);
+
+-- Congresos Detalle
+SELECT TOP(5) CO.NumInforme, CO.Titulo, CONCAT(PE.Nombre, ' ',  PE.Paterno, ' ', PE.Materno) AS [Responsable], CO.Evento
+FROM [FormatosTESE].[dbo].[Congresos] AS CO
+INNER JOIN [FormatosTESE].[dbo].[CargoPersona] AS CP ON CP.Id = CO.Responsable
+INNER JOIN [FormatosTESE].[dbo].[Persona] AS PE ON PE.Id = CP.NumPersona;
+
+-- Estancias Informe
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[Estancias] WITH (NOLOCK);
+
+-- Profesor SNI Informe
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[ProfesorSNI] WITH (NOLOCK);
+
+-- Profesor SNI Detalle
+SELECT TOP(5) SNI.NumInforme, CONCAT(PE.Nombre, ' ',  PE.Paterno, ' ', PE.Materno) AS [Profesor], SNI.Nivel, SNI.NoRegistro
+FROM [FormatosTESE].[dbo].[ProfesorSNI] AS SNI
+INNER JOIN [FormatosTESE].[dbo].[CargoPersona] AS CP ON CP.Id = SNI.NumProfesor
+INNER JOIN [FormatosTESE].[dbo].[Persona] AS PE ON PE.Id = CP.NumPersona;
+
+-- Convenios Informe
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[Convenios] WITH (NOLOCK);
+
+-- Problematica Informe
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[Problematica] WITH (NOLOCK);
+
+-- Proyectos del Programa
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[ProyectosPrograma] WITH (NOLOCK);
+
+-- Proyectos del Programa Detalle
+SELECT CONCAT(PY.Clave, ', ',  PY.Nombre) AS Proyecto, CONCAT(PG.Clave, ', ',  PG.Nombre) AS Programa
+FROM [FormatosTESE].[dbo].[ProyectosPrograma] AS PP
+INNER JOIN [FormatosTESE].[dbo].[Proyecto] AS PY ON PY.Id = PP.NumProyecto
+INNER JOIN [FormatosTESE].[dbo].[Programa] AS PG ON PG.Id = PP.NumPrograma;
+
+-- Programas de la Division
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[ProgramasDivision] WITH (NOLOCK);
+
+-- Programas de la Division Detalle
+SELECT DA.Descripcion AS [Division Academica], CONCAT(PG.Clave, ', ',  PG.Nombre) AS Programa
+FROM [FormatosTESE].[dbo].[ProgramasDivision] AS PD
+INNER JOIN [FormatosTESE].[dbo].[DivisionAcademica] AS DA ON DA.Id = PD.NumDivision
+INNER JOIN [FormatosTESE].[dbo].[Programa] AS PG ON PG.Id = PD.NumPrograma;
+
 -- SELECT TOP(5) * FROM [FormatosTESE].[dbo].[aaaaaaa] WITH (NOLOCK);
 
 -- Obtiene los datos del Personal
@@ -234,5 +285,5 @@ FROM [FormatosTESE].[dbo].[CargoPersona] AS CP
 	INNER JOIN [FormatosTESE].[dbo].[Persona] AS P ON P.Id = CP.NumPersona
 	INNER JOIN [FormatosTESE].[dbo].[DivisionAcademica] AS DA ON DA.Id = CP.NumDivisionAcademica
 	INNER JOIN [FormatosTESE].[dbo].[PeriodoEscolar] AS PE ON PE.Id = CP.NumPeriodoEscolar
-WHERE 
-PE.Descripcion = '2022-2';
+WHERE C.Descripcion = 'Administrador'
+AND PE.Descripcion = '2022-2';

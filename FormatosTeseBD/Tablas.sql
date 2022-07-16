@@ -433,6 +433,26 @@ CREATE TABLE Problematica
 	FOREIGN KEY (NumInforme) REFERENCES Informe(Id)
 );
 GO
+-- Tablas de Muchos a Muchos (N:M)
+CREATE TABLE ProyectosPrograma
+(
+	Id INT IDENTITY PRIMARY KEY NOT NULL,
+	NumProyecto INT NOT NULL,
+	NumPrograma INT NOT NULL,
+	FOREIGN KEY (NumProyecto) REFERENCES Proyecto(Id),
+	FOREIGN KEY (NumPrograma) REFERENCES Programa(Id)
+);
+GO
+CREATE TABLE ProgramasDivision
+(
+	Id INT IDENTITY PRIMARY KEY NOT NULL,
+	NumDivision INT NOT NULL,
+	NumPrograma INT NOT NULL,
+	FOREIGN KEY (NumDivision) REFERENCES DivisionAcademica(Id),
+	FOREIGN KEY (NumPrograma) REFERENCES Programa(Id)
+);
+GO
+-- Proceso General
 CREATE TABLE Proceso
 (
 	Id INT IDENTITY PRIMARY KEY NOT NULL,
@@ -452,24 +472,5 @@ CREATE TABLE Proceso
 	FOREIGN KEY (NumOficioDictamen) REFERENCES OficioDictamen(Id),
 	FOREIGN KEY (NumCartaLiberacion) REFERENCES CartaLiberacion(Id),
 	FOREIGN KEY (NumInforme) REFERENCES Informe(Id)
-);
-GO
--- Tablas de Muchos a Muchos (N:M)
-CREATE TABLE ProyectosPrograma
-(
-	Id INT IDENTITY PRIMARY KEY NOT NULL,
-	NumProyecto INT NOT NULL,
-	NumPrograma INT NOT NULL,
-	FOREIGN KEY (NumProyecto) REFERENCES Proyecto(Id),
-	FOREIGN KEY (NumPrograma) REFERENCES Programa(Id)
-);
-GO
-CREATE TABLE ProgramasDivision
-(
-	Id INT IDENTITY PRIMARY KEY NOT NULL,
-	NumDivision INT NOT NULL,
-	NumPrograma INT NOT NULL,
-	FOREIGN KEY (NumDivision) REFERENCES DivisionAcademica(Id),
-	FOREIGN KEY (NumPrograma) REFERENCES Programa(Id)
 );
 GO

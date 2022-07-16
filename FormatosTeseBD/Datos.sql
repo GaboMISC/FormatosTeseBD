@@ -220,13 +220,60 @@ VALUES (1, 2);
 GO
 -- Informe
 INSERT INTO [FormatosTESE].[dbo].[Informe] (FechaInforme, PeriodoEscolar, NumDivision, NumResponsableDivision, PeriodoReportado, NoInforme, FormatosRequisitados, FormatosAprobadosComite, ProyectosEnProceso, ProyectosFinanciamientoExterno, ProyectosConcluidos, FormatosMes, Articulos, Libros, Patentes, Congresos, Estancias, ProfesorSNI, Convenios, ActividadesInherentes, NumResponsable, NumJefe, NumDirector) 
-VALUES (GETDATE(), 1, 1, 3, 'Julio - Agosto', 1, 2, 1, 1, 0, 0, 3, 2, 1, 1, 2, 1, 1, 0, 'Descripción de Actividades Inherentes', 3, 5, 6);
+VALUES (GETDATE(), 1, 1, 3, 'Julio - Agosto', 1, 2, 1, 1, 0, 0, 3, 2, 3, 3, 2, 1, 1, 2, 'Descripción de Actividades Inherentes', 3, 5, 6);
 GO
 -- Articulos Publicados
 INSERT INTO [FormatosTESE].[dbo].[ArticulosPublicados] (NumInforme, Articulo, Revista, Arbitraje, Nacional) 
 VALUES (1, 'Redes Neuronales', 'TESE', 0, 1);
 INSERT INTO [FormatosTESE].[dbo].[ArticulosPublicados] (NumInforme, Articulo, Revista, Arbitraje, Nacional) 
 VALUES (1, 'Mineria de Datos', 'Politecnico', 1, 0);
+GO
+-- Libros Publicados
+INSERT INTO [FormatosTESE].[dbo].[LibrosPublicados] (NumInforme, Titulo, Editorial, ISBN) 
+VALUES (1, 'Bases de Datos', 'TESE', '1530-4789-1204');
+INSERT INTO [FormatosTESE].[dbo].[LibrosPublicados] (NumInforme, Titulo, Editorial, ISBN) 
+VALUES (1, 'Inteligencia', 'UNAM', '7456-8596-1122');
+INSERT INTO [FormatosTESE].[dbo].[LibrosPublicados] (NumInforme, Titulo, Editorial, ISBN) 
+VALUES (1, 'Modelos de Datos', 'Politecnico', '2345-7865-1010');
+GO
+-- Patentes Informe
+INSERT INTO [FormatosTESE].[dbo].[Patentes] (NumInforme, Descripcion, NoPatente) 
+VALUES (1, 'Mano Robotica', 'Folio 0001');
+INSERT INTO [FormatosTESE].[dbo].[Patentes] (NumInforme, Descripcion, NoPatente) 
+VALUES (1, 'Tarjeta NFT', 'Folio 0002');
+INSERT INTO [FormatosTESE].[dbo].[Patentes] (NumInforme, Descripcion, NoPatente) 
+VALUES (1, 'Placa de Circuitos', 'Folio 0003');
+GO
+-- Congresos Informe
+INSERT INTO [FormatosTESE].[dbo].[Congresos] (NumInforme, Titulo, Responsable, Evento) 
+VALUES (1, 'Congreso de Robotica', 3, 'Evento en Valle de Bravo');
+INSERT INTO [FormatosTESE].[dbo].[Congresos] (NumInforme, Titulo, Responsable, Evento) 
+VALUES (1, 'Congreso Regional XXI', 3, 'Evento en Ecatepec de Morelos');
+GO
+-- Estancias Informe
+INSERT INTO [FormatosTESE].[dbo].[Estancias] (NumInforme, Empresa, Profesor, Trabajo, Duracion) 
+VALUES (1, 'Empresa SA de CV', 'Carlos Rodriguez Gonzalez', 'Elaboracion del Capitulo 1', '3 Meses');
+GO
+-- Profesor SNI Informe
+INSERT INTO [FormatosTESE].[dbo].[ProfesorSNI] (NumInforme, NumProfesor, Nivel, NoRegistro) 
+VALUES (1, 2, 'Nivel SNI', 'Folio 001');
+GO
+-- Convenios Informe
+INSERT INTO [FormatosTESE].[dbo].[Convenios] (NumInforme, Institucion, ProyectoColaborativo) 
+VALUES (1, 'Politenico', 'Medidor de Gases Nocivos');
+INSERT INTO [FormatosTESE].[dbo].[Convenios] (NumInforme, Institucion, ProyectoColaborativo) 
+VALUES (1, 'UNAM', 'Reconocimiento Facial');
+GO
+-- Problematica Informe
+INSERT INTO [FormatosTESE].[dbo].[Problematica] (NumInforme, Problema, SolucionAccion) 
+VALUES (1, 'Descripción de la Problematica del Informe', 'Descripción de la Solución del Informe');
+GO
+-- Proyectos del Programa
+INSERT INTO [FormatosTESE].[dbo].[ProyectosPrograma] (NumProyecto, NumPrograma) VALUES (1, 2);
+GO
+-- Programas de la Division
+INSERT INTO [FormatosTESE].[dbo].[ProgramasDivision] (NumDivision, NumPrograma) VALUES (1, 1);
+INSERT INTO [FormatosTESE].[dbo].[ProgramasDivision] (NumDivision, NumPrograma) VALUES (1, 2);
 GO
 /*
 -- aaaaaaaaaaa
