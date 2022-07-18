@@ -275,6 +275,9 @@ GO
 INSERT INTO [FormatosTESE].[dbo].[ProgramasDivision] (NumDivision, NumPrograma) VALUES (1, 1);
 INSERT INTO [FormatosTESE].[dbo].[ProgramasDivision] (NumDivision, NumPrograma) VALUES (1, 2);
 GO
+-- Proceso
+INSERT INTO [FormatosTESE].[dbo].[Proceso] (NumEstadoProceso, NumProyecto, NumPrograma, NumEvaluacion, NumHojaCalificaciones, NumOficioDictamen, NumCartaLiberacion, NumInforme) 
+VALUES (1, 1, 2, 1, 1, 1, 1, 1);
 /*
 -- aaaaaaaaaaa
 INSERT INTO [FormatosTESE].[dbo].[aaaaaaaaaaa] (aaaaaaaaaaa) VALUES ('aaaaaaaaaaa');

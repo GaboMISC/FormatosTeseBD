@@ -276,7 +276,23 @@ FROM [FormatosTESE].[dbo].[ProgramasDivision] AS PD
 INNER JOIN [FormatosTESE].[dbo].[DivisionAcademica] AS DA ON DA.Id = PD.NumDivision
 INNER JOIN [FormatosTESE].[dbo].[Programa] AS PG ON PG.Id = PD.NumPrograma;
 
--- SELECT TOP(5) * FROM [FormatosTESE].[dbo].[aaaaaaa] WITH (NOLOCK);
+-- Proceso
+SELECT TOP(5) * FROM [FormatosTESE].[dbo].[Proceso] WITH (NOLOCK);
+
+-- Proceso Detalle
+SELECT EP.Descripcion, CONCAT(PY.Clave, ', ',  PY.Nombre) AS Proyecto, CONCAT(PG.Clave, ', ',  PG.Nombre) AS Programa, EV.Calificacion AS [Calificacion de la Evaluacion], HC.AceptacionPrograma AS [Hoja de Calificaciones], CONCAT('Id: ', OD.NoOficio, ', Fecha: ',  OD.FechaOficio) AS [Oficio Dictamen], CONCAT('Id: ', CL.Id, ', Fecha: ',  CL.FechaOficio) AS [Carta de Liberacion], CONCAT('Id: ', I.NoInforme
+, ', Fecha: ',  I.FechaInforme) AS [Informe]
+FROM [FormatosTESE].[dbo].[Proceso] AS PC
+	INNER JOIN [FormatosTESE].[dbo].[EstadoProceso] AS EP ON EP.Id = PC.NumEstadoProceso
+	INNER JOIN [FormatosTESE].[dbo].[Proyecto] AS PY ON PY.Id = PC.NumProyecto
+	INNER JOIN [FormatosTESE].[dbo].[Programa] AS PG ON PG.Id = PC.NumPrograma
+	INNER JOIN [FormatosTESE].[dbo].[Evaluacion] AS EV ON EV.Id = PC.NumEvaluacion
+	INNER JOIN [FormatosTESE].[dbo].[HojaCalificaciones] AS HC ON HC.Id = PC.NumHojaCalificaciones
+	INNER JOIN [FormatosTESE].[dbo].[OficioDictamen] AS OD ON OD.Id = PC.NumOficioDictamen
+	INNER JOIN [FormatosTESE].[dbo].[CartaLiberacion] AS CL ON CL.Id = PC.NumCartaLiberacion
+	INNER JOIN [FormatosTESE].[dbo].[Informe] AS I ON I.Id = PC.NumInforme;
+
+/* ***** Consultas Adicionales ***** */
 
 -- Obtiene los datos del Personal
 SELECT C.Descripcion AS Cargo, P.Nombre, P.Paterno, P.Materno, DA.Descripcion AS [Division Academica], PE.Descripcion, CP.PuestoVigente
@@ -287,3 +303,5 @@ FROM [FormatosTESE].[dbo].[CargoPersona] AS CP
 	INNER JOIN [FormatosTESE].[dbo].[PeriodoEscolar] AS PE ON PE.Id = CP.NumPeriodoEscolar
 WHERE C.Descripcion = 'Administrador'
 AND PE.Descripcion = '2022-2';
+
+-- SELECT TOP(5) * FROM [FormatosTESE].[dbo].[aaaaaaa] WITH (NOLOCK);
