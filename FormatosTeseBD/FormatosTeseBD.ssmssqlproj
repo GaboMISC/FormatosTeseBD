@@ -31,6 +31,24 @@
           <AssociatedConnUserName />
           <FullPath>Datos.sql</FullPath>
         </FileNode>
+        <FileNode Name="FO-TESE-DA-69-PIDT03.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>FO-TESE-DA-69-PIDT03.sql</FullPath>
+        </FileNode>
+        <FileNode Name="FO-TESE-DA-72-PIDT06.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>FO-TESE-DA-72-PIDT06.sql</FullPath>
+        </FileNode>
+        <FileNode Name="FO-TESE-DA-73-PIDT07.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>FO-TESE-DA-73-PIDT07.sql</FullPath>
+        </FileNode>
         <FileNode Name="StoreProcedures.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>GABO</AssociatedConnSrvName>

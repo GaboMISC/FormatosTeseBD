@@ -174,11 +174,11 @@ VALUES (1, 'Asesor Metodologico', NULL, 1, 60);
 GO
 -- Cronograma del Proyecto
 INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance) 
-VALUES (1, 1, 'Etapa 1', 'Dias', 5, '2022-04-01 00:00:00.000', '2022-04-06 00:00:00.000', 1, NULL);
+VALUES (1, 1, 'Etapa 1', 'Dias', 5, '2022-04-01 00:00:00.000', '2022-04-06 00:00:00.000', 1, 20);
 INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance)
-VALUES (1, 2, 'Etapa 2', 'Horas', 5, '2022-04-07 00:12:00.000', '2022-04-07 00:17:00.000', 1, NULL);
+VALUES (1, 2, 'Etapa 2', 'Horas', 40, '2022-04-07 00:12:00.000', '2022-04-07 00:17:00.000', 1, 40);
 INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance)
-VALUES (1, 3, 'Etapa 3', 'Meses', 6, '2022-05-01 00:00:00.000', '2022-10-01 00:00:00.000', 1, NULL);
+VALUES (1, 3, 'Etapa 3', 'Meses', 6, '2022-05-01 00:00:00.000', '2022-10-01 00:00:00.000', 1, 40);
 GO
 -- Hoja de Analisis
 INSERT INTO [FormatosTESE].[dbo].[HojaAnalisis] (NumProyecto, AntecedentesJustificacion, Metodologia, Objetivos, Impacto, SectorPublico, FormacionRH, SubtotalCriterios, cInfraestructura, cActividades, cRH, cProgramacion, cPresupuesto, SubtotalViabilidad, Total) 
