@@ -27,7 +27,8 @@ WHERE PY.Clave = 'Proy-01';
 SELECT DA.Descripcion AS [Division Academica]
 FROM [FormatosTESE].[dbo].[Proyecto] AS PY
 	INNER JOIN [FormatosTESE].[dbo].[ProyectosPrograma] AS PP ON PP.NumProyecto = PY.Id
-	INNER JOIN [FormatosTESE].[dbo].[ProgramasDivision] AS PD ON PD.NumPrograma = PP.NumPrograma
+	INNER JOIN [FormatosTESE].[dbo].[Programa] AS PG ON PG.Id = PP.NumPrograma
+	INNER JOIN [FormatosTESE].[dbo].[ProgramasDivision] AS PD ON PD.NumPrograma = PG.Id
 	INNER JOIN [FormatosTESE].[dbo].[DivisionAcademica] AS DA ON DA.Id = PD.NumDivision
 WHERE PY.Clave = 'Proy-01';
 
