@@ -3,6 +3,18 @@
 	+++++ FO-TESE-DA-73-PIDT07 +++++
 */
 
+/*
+	Tablas:
+		- [OficioDictamen]
+		- [Proyecto]
+		- [CargoPersona]
+		- [Persona]
+		- [ProyectosPrograma]
+		- [ProgramasDivision]
+		- [DivisionAcademica]
+		- [ComiteEvaluador]
+*/
+
 -- Consulta General
 SELECT OD.NoOficio, OD.FechaOficio AS [Fecha Oficio], PY.Nombre AS [Nombre Proyecto], PY.Clave AS [Clave Proyecto], CONCAT(P.Nombre, ' ', P.Paterno, ' ', P.Materno) AS [Persona Envio Documento]
 FROM [FormatosTESE].[dbo].[OficioDictamen] AS OD

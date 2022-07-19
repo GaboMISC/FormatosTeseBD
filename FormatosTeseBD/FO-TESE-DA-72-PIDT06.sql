@@ -3,6 +3,16 @@
 	+++++ FO-TESE-DA-72-PIDT06 +++++
 */
 
+/*
+	Tablas:
+		- [Proyecto]
+		- [CargoPersona]
+		- [Cargo]
+		- [Persona]
+		- [CronogramaProyecto]
+		- [DivisionAcademica]
+*/
+
 -- Consulta General
 SELECT CONCAT(PY.Clave, ', ',  PY.Nombre) AS Proyecto, GETDATE() AS [Fecha del Reporte], C.Descripcion AS Cargo, CONCAT(P.Nombre, ' ',  P.Paterno, ' ', P.Materno) AS [Coordinador Proyecto]
 FROM [FormatosTESE].[dbo].[Proyecto] AS PY

@@ -1,6 +1,19 @@
 /*
 	***** Protocolo para la Evaluación de Proyectos de Investigación *****
-	+++++ FO-TESE-DA-69- PIDT03 +++++
+	+++++ FO-TESE-DA-69-PIDT03 +++++
+*/
+
+/*
+	Tablas:
+		- [Evaluacion]
+		- [HojaAnalisis]
+		- [Prioridad]
+		- [CargoPersona]
+		- [Persona]
+		- [Evaluadores]
+		- [Proyecto]
+		- [ProyectosPrograma]
+		- [Programa]
 */
 
 -- Consulta General

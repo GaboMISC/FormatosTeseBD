@@ -141,6 +141,10 @@ GO
 -- Proyecto
 INSERT INTO [FormatosTESE].[dbo].[Proyecto] (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, NumNivelAcademico, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
 VALUES ('Proy-01', 'Redes Neuronales Convolucionales', 4, 2, 1, 2, 'Descripción de los Resultados del Proyecto', 'Descripción de la Justificación del Proyecto', 'Descripción del Resumen del Proyecto', 'Descripción de los Objetivos del Proyecto', 'Descripción de la Metodlogía del Proyecto', 'Descripción de las Metas del Proyecto', NULL);
+INSERT INTO [FormatosTESE].[dbo].[Proyecto] (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, NumNivelAcademico, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
+VALUES ('Proy-02', 'Autenticacion con Inteligencia Artifial', 4, 3, 1, 2, 'Descripción de los Resultados del Proyecto', 'Descripción de la Justificación del Proyecto', 'Descripción del Resumen del Proyecto', 'Descripción de los Objetivos del Proyecto', 'Descripción de la Metodlogía del Proyecto', 'Descripción de las Metas del Proyecto', NULL);
+INSERT INTO [FormatosTESE].[dbo].[Proyecto] (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, NumNivelAcademico, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
+VALUES ('Proy-03', 'Punto de Venta para Muebleria', 4, 4, 11, 3, 'Descripción de los Resultados del Proyecto', 'Descripción de la Justificación del Proyecto', 'Descripción del Resumen del Proyecto', 'Descripción de los Objetivos del Proyecto', 'Descripción de la Metodlogía del Proyecto', 'Descripción de las Metas del Proyecto', NULL);
 GO
 -- Recusos Materiales
 INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
@@ -149,6 +153,18 @@ INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Des
 VALUES (1, 2, 'Licencias dde Software');
 INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
 VALUES (1, 4, 'Plumones para Pizarrón');
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 1, 'Equipo de Computo');
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 2, 'Licencias dde Software');
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 4, 'Plumones para Pizarrón');
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 1, 'Equipo de Computo');
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 2, 'Licencias dde Software');
+INSERT INTO [FormatosTESE].[dbo].[RecusosMateriales] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 4, 'Plumones para Pizarrón');
 GO
 -- Servicios
 INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
@@ -157,6 +173,18 @@ INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion
 VALUES (1, 1, 'Agua Potable');
 INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
 VALUES (1, 1, 'Comedor');
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 1, 'Internet');
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 1, 'Agua Potable');
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 1, 'Comedor');
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 1, 'Internet');
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 1, 'Agua Potable');
+INSERT INTO [FormatosTESE].[dbo].[Servicios] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 1, 'Comedor');
 GO
 -- BienesMuebles
 INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
@@ -165,12 +193,32 @@ INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descrip
 VALUES (1, 2, 'Silla para Escritorio');
 INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
 VALUES (1, 2, 'Departamento u Oficina de Investigacion y Desarrollo');
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 2, 'Escritorio');
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 2, 'Silla para Escritorio');
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (2, 2, 'Departamento u Oficina de Investigacion y Desarrollo');
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 2, 'Escritorio');
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 2, 'Silla para Escritorio');
+INSERT INTO [FormatosTESE].[dbo].[BienesMuebles] (NumProyecto, Cantidad, Descripcion) 
+VALUES (3, 2, 'Departamento u Oficina de Investigacion y Desarrollo');
 GO
 -- Honorarios
 INSERT INTO [FormatosTESE].[dbo].[Honorarios] (NumProyecto, EspecialidadPersonal, NumPersonalExterno, NumPersonalInterno, Dedicacionhoras) 
 VALUES (1, 'Asesor Tecnico', 1, NULL, 120);
 INSERT INTO [FormatosTESE].[dbo].[Honorarios] (NumProyecto, EspecialidadPersonal, NumPersonalExterno, NumPersonalInterno, Dedicacionhoras) 
 VALUES (1, 'Asesor Metodologico', NULL, 1, 60);
+INSERT INTO [FormatosTESE].[dbo].[Honorarios] (NumProyecto, EspecialidadPersonal, NumPersonalExterno, NumPersonalInterno, Dedicacionhoras) 
+VALUES (2, 'Asesor Tecnico', 1, NULL, 120);
+INSERT INTO [FormatosTESE].[dbo].[Honorarios] (NumProyecto, EspecialidadPersonal, NumPersonalExterno, NumPersonalInterno, Dedicacionhoras) 
+VALUES (2, 'Asesor Metodologico', NULL, 1, 60);
+INSERT INTO [FormatosTESE].[dbo].[Honorarios] (NumProyecto, EspecialidadPersonal, NumPersonalExterno, NumPersonalInterno, Dedicacionhoras) 
+VALUES (3, 'Asesor Tecnico', 1, NULL, 120);
+INSERT INTO [FormatosTESE].[dbo].[Honorarios] (NumProyecto, EspecialidadPersonal, NumPersonalExterno, NumPersonalInterno, Dedicacionhoras) 
+VALUES (3, 'Asesor Metodologico', NULL, 1, 60);
 GO
 -- Cronograma del Proyecto
 INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance) 
@@ -179,44 +227,86 @@ INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Acti
 VALUES (1, 2, 'Etapa 2', 'Horas', 40, '2022-04-07 00:12:00.000', '2022-04-07 00:17:00.000', 1, 40);
 INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance)
 VALUES (1, 3, 'Etapa 3', 'Meses', 6, '2022-05-01 00:00:00.000', '2022-10-01 00:00:00.000', 1, 40);
+INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance) 
+VALUES (2, 1, 'Etapa 1', 'Dias', 5, '2022-04-01 00:00:00.000', '2022-04-06 00:00:00.000', 1, 10);
+INSERT INTO [FormatosTESE].[dbo].[CronogramaProyecto] (NumProyecto, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses, PorcentajeAvance) 
+VALUES (3, 1, 'Etapa 1', 'Dias', 5, '2022-04-01 00:00:00.000', '2022-04-06 00:00:00.000', 1, 10);
 GO
 -- Hoja de Analisis
 INSERT INTO [FormatosTESE].[dbo].[HojaAnalisis] (NumProyecto, AntecedentesJustificacion, Metodologia, Objetivos, Impacto, SectorPublico, FormacionRH, SubtotalCriterios, cInfraestructura, cActividades, cRH, cProgramacion, cPresupuesto, SubtotalViabilidad, Total) 
 VALUES (1, 9, 7, 8, 9, 7, 7, 47, 4, 2, 1, 3, 5, 15, 62);
+INSERT INTO [FormatosTESE].[dbo].[HojaAnalisis] (NumProyecto, AntecedentesJustificacion, Metodologia, Objetivos, Impacto, SectorPublico, FormacionRH, SubtotalCriterios, cInfraestructura, cActividades, cRH, cProgramacion, cPresupuesto, SubtotalViabilidad, Total) 
+VALUES (2, 9, 7, 8, 5, 7, 5, 41, 4, 2, 1, 3, 5, 10, 57);
+INSERT INTO [FormatosTESE].[dbo].[HojaAnalisis] (NumProyecto, AntecedentesJustificacion, Metodologia, Objetivos, Impacto, SectorPublico, FormacionRH, SubtotalCriterios, cInfraestructura, cActividades, cRH, cProgramacion, cPresupuesto, SubtotalViabilidad, Total) 
+VALUES (3, 9, 7, 7, 5, 7, 5, 40, 4, 2, 1, 3, 5, 8, 55);
 GO
 -- Evaluacion
 INSERT INTO [FormatosTESE].[dbo].[Evaluacion] (Calificacion, NumPrioridad, NumResponsable, NumJefe, NumDirector, NumHojaAnalisis) 
 VALUES (8, 3, 3, 5, 6, 1);
+INSERT INTO [FormatosTESE].[dbo].[Evaluacion] (Calificacion, NumPrioridad, NumResponsable, NumJefe, NumDirector, NumHojaAnalisis) 
+VALUES (9, 1, 3, 5, 6, 2);
+INSERT INTO [FormatosTESE].[dbo].[Evaluacion] (Calificacion, NumPrioridad, NumResponsable, NumJefe, NumDirector, NumHojaAnalisis) 
+VALUES (7, 2, 3, 5, 6, 3);
 GO
 -- Evaluadores
 INSERT INTO [FormatosTESE].[dbo].[Evaluadores] (NumEvaluacion, NumCargoPersona) 
 VALUES (1, 1);
 INSERT INTO [FormatosTESE].[dbo].[Evaluadores] (NumEvaluacion, NumCargoPersona) 
 VALUES (1, 2);
+INSERT INTO [FormatosTESE].[dbo].[Evaluadores] (NumEvaluacion, NumCargoPersona) 
+VALUES (2, 7);
+INSERT INTO [FormatosTESE].[dbo].[Evaluadores] (NumEvaluacion, NumCargoPersona) 
+VALUES (2, 10);
+INSERT INTO [FormatosTESE].[dbo].[Evaluadores] (NumEvaluacion, NumCargoPersona) 
+VALUES (3, 7);
+INSERT INTO [FormatosTESE].[dbo].[Evaluadores] (NumEvaluacion, NumCargoPersona) 
+VALUES (3, 10);
 GO
 -- Hoja de Calificaciones
 INSERT INTO [FormatosTESE].[dbo].[HojaCalificaciones] (TotalProyectos, PromedioProyectos, AceptacionPrograma, NumResponsable, NumJefe, NumDirector, NumPrograma)
-VALUES (1, 8, 'El proyecto es viable y cuenta con los criterios de aceptacion necesarios.', 3, 5, 6, 1);
+VALUES (2, 8, 'El programa es viable y cuenta con los criterios de aceptacion necesarios.', 3, 5, 6, 2);
+INSERT INTO [FormatosTESE].[dbo].[HojaCalificaciones] (TotalProyectos, PromedioProyectos, AceptacionPrograma, NumResponsable, NumJefe, NumDirector, NumPrograma)
+VALUES (1, 7, 'El programa es viable y cuenta con los criterios de aceptacion necesarios.', 3, 5, 6, 1);
 GO
 -- Oficio Dictamen
 INSERT INTO [FormatosTESE].[dbo].[OficioDictamen] (NoOficio, FechaOficio, NumProyecto) 
 VALUES (1, GETDATE(), 1);
+INSERT INTO [FormatosTESE].[dbo].[OficioDictamen] (NoOficio, FechaOficio, NumProyecto) 
+VALUES (2, GETDATE(), 2);
+INSERT INTO [FormatosTESE].[dbo].[OficioDictamen] (NoOficio, FechaOficio, NumProyecto) 
+VALUES (3, GETDATE(), 3);
 GO
 -- Comite Evaluador
 INSERT INTO [FormatosTESE].[dbo].[ComiteEvaluador] (NumOficioDictamen, NumIntegranteComite) 
 VALUES (1, 1);
 INSERT INTO [FormatosTESE].[dbo].[ComiteEvaluador] (NumOficioDictamen, NumIntegranteComite) 
 VALUES (1, 2);
+INSERT INTO [FormatosTESE].[dbo].[ComiteEvaluador] (NumOficioDictamen, NumIntegranteComite) 
+VALUES (2, 7);
+INSERT INTO [FormatosTESE].[dbo].[ComiteEvaluador] (NumOficioDictamen, NumIntegranteComite) 
+VALUES (2, 10);
+INSERT INTO [FormatosTESE].[dbo].[ComiteEvaluador] (NumOficioDictamen, NumIntegranteComite) 
+VALUES (3, 7);
+INSERT INTO [FormatosTESE].[dbo].[ComiteEvaluador] (NumOficioDictamen, NumIntegranteComite) 
+VALUES (3, 10);
 GO
 -- Carta de Liberacion
 INSERT INTO [FormatosTESE].[dbo].[CartaLiberacion] (NumDivision, NoOficio, FechaOficio, NombrePersona, NumProyecto) 
 VALUES (1, 1, GETDATE(), 2, 1);
+INSERT INTO [FormatosTESE].[dbo].[CartaLiberacion] (NumDivision, NoOficio, FechaOficio, NombrePersona, NumProyecto) 
+VALUES (1, 2, GETDATE(), 7, 2);
+INSERT INTO [FormatosTESE].[dbo].[CartaLiberacion] (NumDivision, NoOficio, FechaOficio, NombrePersona, NumProyecto) 
+VALUES (1, 3, GETDATE(), 10, 3);
 GO
 -- Comite de Liberacion
 INSERT INTO [FormatosTESE].[dbo].[ComiteLiberacion] (NumCartaLiberacion, NumIntegranteComite) 
 VALUES (1, 1);
 INSERT INTO [FormatosTESE].[dbo].[ComiteLiberacion] (NumCartaLiberacion, NumIntegranteComite) 
 VALUES (1, 2);
+INSERT INTO [FormatosTESE].[dbo].[ComiteLiberacion] (NumCartaLiberacion, NumIntegranteComite) 
+VALUES (2, 7);
+INSERT INTO [FormatosTESE].[dbo].[ComiteLiberacion] (NumCartaLiberacion, NumIntegranteComite) 
+VALUES (2, 10);
 GO
 -- Informe
 INSERT INTO [FormatosTESE].[dbo].[Informe] (FechaInforme, PeriodoEscolar, NumDivision, NumResponsableDivision, PeriodoReportado, NoInforme, FormatosRequisitados, FormatosAprobadosComite, ProyectosEnProceso, ProyectosFinanciamientoExterno, ProyectosConcluidos, FormatosMes, Articulos, Libros, Patentes, Congresos, Estancias, ProfesorSNI, Convenios, ActividadesInherentes, NumResponsable, NumJefe, NumDirector) 
@@ -270,6 +360,8 @@ VALUES (1, 'Descripción de la Problematica del Informe', 'Descripción de la Solu
 GO
 -- Proyectos del Programa
 INSERT INTO [FormatosTESE].[dbo].[ProyectosPrograma] (NumProyecto, NumPrograma) VALUES (1, 2);
+INSERT INTO [FormatosTESE].[dbo].[ProyectosPrograma] (NumProyecto, NumPrograma) VALUES (2, 2);
+INSERT INTO [FormatosTESE].[dbo].[ProyectosPrograma] (NumProyecto, NumPrograma) VALUES (3, 1);
 GO
 -- Programas de la Division
 INSERT INTO [FormatosTESE].[dbo].[ProgramasDivision] (NumDivision, NumPrograma) VALUES (1, 1);
@@ -278,6 +370,10 @@ GO
 -- Proceso
 INSERT INTO [FormatosTESE].[dbo].[Proceso] (NumEstadoProceso, NumProyecto, NumPrograma, NumEvaluacion, NumHojaCalificaciones, NumOficioDictamen, NumCartaLiberacion, NumInforme) 
 VALUES (1, 1, 2, 1, 1, 1, 1, 1);
+INSERT INTO [FormatosTESE].[dbo].[Proceso] (NumEstadoProceso, NumProyecto, NumPrograma, NumEvaluacion, NumHojaCalificaciones, NumOficioDictamen, NumCartaLiberacion, NumInforme) 
+VALUES (1, 2, 2, 2, 1, 2, 2, 1);
+INSERT INTO [FormatosTESE].[dbo].[Proceso] (NumEstadoProceso, NumProyecto, NumPrograma, NumEvaluacion, NumHojaCalificaciones, NumOficioDictamen, NumCartaLiberacion, NumInforme) 
+VALUES (1, 3, 1, 3, 2, 3, 3, 1);
 /*
 -- aaaaaaaaaaa
 INSERT INTO [FormatosTESE].[dbo].[aaaaaaaaaaa] (aaaaaaaaaaa) VALUES ('aaaaaaaaaaa');
