@@ -43,6 +43,12 @@
           <AssociatedConnUserName />
           <FullPath>FO-TESE-DA-70-PIDT04.sql</FullPath>
         </FileNode>
+        <FileNode Name="FO-TESE-DA-71-PIDT05.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>FO-TESE-DA-71-PIDT05.sql</FullPath>
+        </FileNode>
         <FileNode Name="FO-TESE-DA-72-PIDT06.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
