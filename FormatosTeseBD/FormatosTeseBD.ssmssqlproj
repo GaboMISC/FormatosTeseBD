@@ -31,6 +31,12 @@
           <AssociatedConnUserName />
           <FullPath>Datos.sql</FullPath>
         </FileNode>
+        <FileNode Name="DatosMySQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DatosMySQL.sql</FullPath>
+        </FileNode>
         <FileNode Name="FO-TESE-DA-69-PIDT03.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
@@ -72,6 +78,12 @@
           <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Tablas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TablasMySQL.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>TablasMySQL.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
