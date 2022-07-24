@@ -25,23 +25,11 @@
           <AssociatedConnUserName />
           <FullPath>Consultas Generales.sql</FullPath>
         </FileNode>
-        <FileNode Name="ConsultasMySQL.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>ConsultasMySQL.sql</FullPath>
-        </FileNode>
         <FileNode Name="Datos.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Datos.sql</FullPath>
-        </FileNode>
-        <FileNode Name="DatosMySQL.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>DatosMySQL.sql</FullPath>
         </FileNode>
         <FileNode Name="FO-TESE-DA-69-PIDT03.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
@@ -73,23 +61,41 @@
           <AssociatedConnUserName />
           <FullPath>FO-TESE-DA-73-PIDT07.sql</FullPath>
         </FileNode>
-        <FileNode Name="StoreProcedures.sql">
+        <FileNode Name="MySQLConsultas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>StoreProcedures.sql</FullPath>
+          <FullPath>MySQLConsultas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MySQLDatos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MySQLDatos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MySQLStoreProcedures.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MySQLStoreProcedures.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MySQLTablas.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MySQLTablas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MySQLViews.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MySQLViews.sql</FullPath>
         </FileNode>
         <FileNode Name="Tablas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Tablas.sql</FullPath>
-        </FileNode>
-        <FileNode Name="TablasMySQL.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:GABO:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>GABO</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>TablasMySQL.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
