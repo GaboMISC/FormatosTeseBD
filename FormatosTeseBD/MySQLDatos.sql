@@ -128,7 +128,7 @@ VALUES (1, 9, 10, 2, 1);
 INSERT INTO Programa (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
 VALUES ('ISC-01', 'Ingeniería Sistemas Computacionales', 4, 2, 2, 'Descripción de los Resultados del Programa', 'Descripción de la Justificación del Programa', 'Descripción del Resumen del Programa', 'Descripción de los Objetivos del Programa', 'Descripción de la Metodlogía del Programa', 'Descripción de las Metas del Programa', NULL);
 INSERT INTO Programa (Clave, Nombre, NumCoordinador, NumAreaInvestigacion, NumLineaInvestigacion, PosibleResultado, Justificacion, Resumen, Objetivos, Metodologia, Metas, CV) 
-VALUES ('MISC-02', 'Maestría en Ingeniería en Sistemas Computacionales  ', 4, 3, 1, 'Descripción de los Resultados del Programa', 'Descripción de la Justificación del Programa', 'Descripción del Resumen del Programa', 'Descripción de los Objetivos del Programa', 'Descripción de la Metodlogía del Programa', 'Descripción de las Metas del Programa', NULL);
+VALUES ('MISC-02', 'Maestría en Ingeniería en Sistemas Computacionales', 4, 3, 1, 'Descripción de los Resultados del Programa', 'Descripción de la Justificación del Programa', 'Descripción del Resumen del Programa', 'Descripción de los Objetivos del Programa', 'Descripción de la Metodlogía del Programa', 'Descripción de las Metas del Programa', NULL);
 
 -- Cronograma del Programa
 INSERT INTO CronogramaPrograma (NumPrograma, Numero, Actividad, Unidad, Cantidad, FechaInicio, FechaFin, Meses) 
