@@ -43,7 +43,7 @@ FROM Evaluacion AS EV
 	INNER JOIN Persona AS PDIR ON PDIR.Id = DIR.NumPersona
 WHERE PY.Clave = 'Proy-01';
 
--- Hoja de Analisis Tecnico al Proyeccto de Investigación
+-- Hoja de Analisis Tecnico al Proyecto de Investigación
 SELECT CONCAT(PY.Clave, ', ',  PY.Nombre) AS Proyecto, CONCAT(PE.Nombre, ' ', PE.Paterno, ' ', PE.Materno, ' - ', CA.Descripcion) AS Coordinador, CONCAT(PG.Clave, ', ',  PG.Nombre) AS Programa
 FROM Proyecto AS PY
 	INNER JOIN CargoPersona AS CP ON CP.Id = PY.NumCoordinador

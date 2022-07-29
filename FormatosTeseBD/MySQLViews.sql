@@ -1,19 +1,5 @@
 USE FormatosTESE;
 
--- Evaluadores del Proyecto
-CREATE VIEW vEvaluadoresProyecto
-AS
-SELECT PY.Clave AS ClaveProyecto, PY.Nombre AS NombreProyecto, EVS.NumEvaluacion AS EvaluaciónId, CONCAT(PE.Nombre, ' ',  PE.Paterno, ' ', PE.Materno) AS Evaluador
-FROM Proyecto AS PY
-	INNER JOIN HojaAnalisis AS HA ON HA.NumProyecto = PY.Id
-	INNER JOIN Evaluacion AS EV ON EV.NumHojaAnalisis = HA.Id
-	INNER JOIN Evaluadores AS EVS ON EVS.NumEvaluacion = EV.Id
-	INNER JOIN CargoPersona AS CP ON CP.Id = EVS.NumCargoPersona
-	INNER JOIN Persona AS PE ON PE.Id = CP.NumPersona;
-
--- Se ejecuta la Vista
--- SELECT * FROM vEvaluadoresProyecto WHERE ClaveProyecto = 'Proy-01';
-
 -- Datos Generales Formato 69
 CREATE VIEW vFormato69
 AS
@@ -32,7 +18,46 @@ FROM Evaluacion AS EV
 	INNER JOIN CargoPersona AS DIR ON DIR.Id = EV.NumDirector
 	INNER JOIN Persona AS PDIR ON PDIR.Id = DIR.NumPersona;
 
+-- Consulta con la Vista
 -- SELECT * FROM vFormato69 WHERE ClaveProyecto = 'Proy-01';
+
+-- Evaluadores del Proyecto
+CREATE VIEW vEvaluadoresProyecto
+AS
+SELECT PY.Clave AS ClaveProyecto, PY.Nombre AS NombreProyecto, EVS.NumEvaluacion AS EvaluaciónId, CONCAT(PE.Nombre, ' ',  PE.Paterno, ' ', PE.Materno) AS Evaluador
+FROM Proyecto AS PY
+	INNER JOIN HojaAnalisis AS HA ON HA.NumProyecto = PY.Id
+	INNER JOIN Evaluacion AS EV ON EV.NumHojaAnalisis = HA.Id
+	INNER JOIN Evaluadores AS EVS ON EVS.NumEvaluacion = EV.Id
+	INNER JOIN CargoPersona AS CP ON CP.Id = EVS.NumCargoPersona
+	INNER JOIN Persona AS PE ON PE.Id = CP.NumPersona;
+
+-- Consulta con la Vista
+-- SELECT * FROM vEvaluadoresProyecto WHERE ClaveProyecto = 'Proy-01';
+
+-- Hoja de Analisis Tecnico al Proyecto de Investigación
+CREATE VIEW vFormato69HojaAnalisisProyecto
+AS
+SELECT PY.Clave AS ClaveProyecto, PY.Nombre AS NombreProyecto, CONCAT(PE.Nombre, ' ', PE.Paterno, ' ', PE.Materno, ' - ', CA.Descripcion) AS Coordinador, PG.Clave AS ClavePrograma, PG.Nombre AS NombrePrograma
+FROM Proyecto AS PY
+	INNER JOIN CargoPersona AS CP ON CP.Id = PY.NumCoordinador
+	INNER JOIN Persona AS PE ON PE.Id = CP.NumPersona
+	INNER JOIN Cargo AS CA ON CA.Id = CP.NumCargo
+	INNER JOIN ProyectosPrograma AS PP ON PP.NumProyecto = PY.Id
+	INNER JOIN Programa AS PG ON PG.Id = PP.NumPrograma;
+
+-- Consulta con la Vista
+-- SELECT * FROM vFormato69HojaAnalisisProyecto WHERE ClaveProyecto = 'Proy-01';
+
+-- Criterios Generales de la Evaluacion (Calidad de la Propuesta, Factibilidad y Viabilidad de la Propuesta)
+CREATE VIEW vFormato69PuntuacionCriteriosGeneralesEvaluacion
+AS
+SELECT HA.Id, PY.Clave AS ClaveProyecto, PY.Nombre AS NombreProyecto, HA.AntecedentesJustificacion, HA.Metodologia, HA.Objetivos, HA.Impacto, HA.SectorPublico, HA.FormacionRH, HA.SubtotalCriterios, HA.cInfraestructura, HA.cActividades, HA.cRH, HA.cProgramacion, HA.cPresupuesto, HA.SubtotalViabilidad, HA.Total
+FROM HojaAnalisis AS HA
+	INNER JOIN Proyecto AS PY ON PY.Id = HA.NumProyecto;
+
+-- Consulta con la Vista
+-- SELECT * FROM vFormato69PuntuacionCriteriosGeneralesEvaluacion WHERE ClaveProyecto = 'Proy-01';
 
 /* ***** FO-TESE-DA-70-PIDT04 ***** */
 
